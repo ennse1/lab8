@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -113,7 +113,7 @@ namespace lab8.Models
         public byte[] FilePathSerialized
         {
             get
-            { // serialize
+            {
                 if (FilePath == null) return null;
                 using (MemoryStream ms = new MemoryStream())
                 {
@@ -122,7 +122,7 @@ namespace lab8.Models
                 }
             }
             set
-            { // deserialize
+            {
                 if (value == null)
                 {
                     FilePath = null;
@@ -136,6 +136,5 @@ namespace lab8.Models
                 }
             }
         }
-
     }
 }
